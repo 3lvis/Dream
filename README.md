@@ -23,4 +23,3 @@ You and your backend engineer agree on an structure, then you open the data mode
 ## 6. Updating a Post
 
 ## 7. Deleting a Post
->>>>>>> origin/master
