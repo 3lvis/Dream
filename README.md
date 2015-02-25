@@ -10,4 +10,16 @@ You and your backend engineer agree on an structure, then you open the data mode
 
 ## 1. The Model
 
-![model](https://github.com/NSElvis/Dream/blob/master/Images/model.png)
+![model](https://github.com/NSElvis/Dream/blob/master/Images/model-v2.png)
+
+## 2. The App
+
+## 3. Retreiving Posts
+
+## 4. Creating a Post
+
+## 5. Discarding a (draft) Post
+
+## 6. Updating a Post
+
+## 7. Deleting a Post
