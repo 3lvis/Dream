@@ -8,4 +8,6 @@ This is how I think it should work.
 
 You and your backend engineer agree on an structure, then you open the data modeler, create your tables, wire up their relationships, press a “Generate” button and BOOM! You are ready to go.
 
+## 1. The Model
+
 ![model](https://github.com/NSElvis/Dream/blob/master/Images/model.png)
