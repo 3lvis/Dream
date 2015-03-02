@@ -1,4 +1,4 @@
-# Typing never was the fun part
+# Modern App Development Done Right™
 
 UI and UX has always been the main differentiator between apps, persistency and networking in the other side just boilerplate, apps are meant to be the fancy glass on front of the great structure that your backend engineers will build. 
 
