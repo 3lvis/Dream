@@ -1,4 +1,4 @@
-# Modern App Development Done Right™
+![Dream](https://github.com/NSElvis/Dream/blob/master/Images/dream-cover-v1.png)
 
 [![Work in progress](https://img.shields.io/badge/status-work%20in%20progress-orange.svg)](https://github.com/NSElvis/Dream)
 
