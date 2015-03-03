@@ -1,5 +1,7 @@
 # Modern App Development Done Right™
 
+[![Work in progress](https://img.shields.io/badge/status-work%20in%20progress-orange.svg)](https://github.com/NSElvis/Dream)
+
 UI and UX has always been the main differentiator between apps, persistency and networking in the other side just boilerplate, apps are meant to be the fancy glass on front of the great structure that your backend engineers will build. 
 
 When making apps I don’t want to think on those things, persistency and networking should be already a solved problem.
