@@ -10,12 +10,9 @@
 		14BCC8D81A9D9C7800C5F2D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BCC8D71A9D9C7800C5F2D3 /* main.m */; };
 		14BCC8DB1A9D9C7800C5F2D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BCC8DA1A9D9C7800C5F2D3 /* AppDelegate.m */; };
 		14BCC8DE1A9D9C7800C5F2D3 /* Dream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14BCC8DC1A9D9C7800C5F2D3 /* Dream.xcdatamodeld */; };
-		14BCC8E11A9D9C7800C5F2D3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BCC8E01A9D9C7800C5F2D3 /* MasterViewController.m */; };
-		14BCC8E41A9D9C7800C5F2D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BCC8E31A9D9C7800C5F2D3 /* DetailViewController.m */; };
-		14BCC8E71A9D9C7800C5F2D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BCC8E51A9D9C7800C5F2D3 /* Main.storyboard */; };
 		14BCC8E91A9D9C7800C5F2D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BCC8E81A9D9C7800C5F2D3 /* Images.xcassets */; };
-		14BCC8EC1A9D9C7800C5F2D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14BCC8EA1A9D9C7800C5F2D3 /* LaunchScreen.xib */; };
 		14BCC8F81A9D9C7800C5F2D3 /* DreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BCC8F71A9D9C7800C5F2D3 /* DreamTests.m */; };
+		14CAA4EE1AA52FCC00249DB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CAA4ED1AA52FCC00249DB2 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,16 +32,12 @@
 		14BCC8D91A9D9C7800C5F2D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14BCC8DA1A9D9C7800C5F2D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14BCC8DD1A9D9C7800C5F2D3 /* Dream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dream.xcdatamodel; sourceTree = "<group>"; };
-		14BCC8DF1A9D9C7800C5F2D3 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		14BCC8E01A9D9C7800C5F2D3 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		14BCC8E21A9D9C7800C5F2D3 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		14BCC8E31A9D9C7800C5F2D3 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		14BCC8E61A9D9C7800C5F2D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14BCC8E81A9D9C7800C5F2D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		14BCC8EB1A9D9C7800C5F2D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		14BCC8F11A9D9C7800C5F2D3 /* DreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BCC8F61A9D9C7800C5F2D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BCC8F71A9D9C7800C5F2D3 /* DreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamTests.m; sourceTree = "<group>"; };
+		14CAA4EC1AA52FCC00249DB2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		14CAA4ED1AA52FCC00249DB2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +81,9 @@
 			children = (
 				14BCC8D91A9D9C7800C5F2D3 /* AppDelegate.h */,
 				14BCC8DA1A9D9C7800C5F2D3 /* AppDelegate.m */,
-				14BCC8DF1A9D9C7800C5F2D3 /* MasterViewController.h */,
-				14BCC8E01A9D9C7800C5F2D3 /* MasterViewController.m */,
-				14BCC8E21A9D9C7800C5F2D3 /* DetailViewController.h */,
-				14BCC8E31A9D9C7800C5F2D3 /* DetailViewController.m */,
-				14BCC8E51A9D9C7800C5F2D3 /* Main.storyboard */,
+				14CAA4EC1AA52FCC00249DB2 /* ViewController.h */,
+				14CAA4ED1AA52FCC00249DB2 /* ViewController.m */,
 				14BCC8E81A9D9C7800C5F2D3 /* Images.xcassets */,
-				14BCC8EA1A9D9C7800C5F2D3 /* LaunchScreen.xib */,
 				14BCC8DC1A9D9C7800C5F2D3 /* Dream.xcdatamodeld */,
 				14BCC8D51A9D9C7800C5F2D3 /* Supporting Files */,
 			);
@@ -207,8 +196,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BCC8E71A9D9C7800C5F2D3 /* Main.storyboard in Resources */,
-				14BCC8EC1A9D9C7800C5F2D3 /* LaunchScreen.xib in Resources */,
 				14BCC8E91A9D9C7800C5F2D3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,10 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BCC8E41A9D9C7800C5F2D3 /* DetailViewController.m in Sources */,
-				14BCC8E11A9D9C7800C5F2D3 /* MasterViewController.m in Sources */,
 				14BCC8DB1A9D9C7800C5F2D3 /* AppDelegate.m in Sources */,
 				14BCC8DE1A9D9C7800C5F2D3 /* Dream.xcdatamodeld in Sources */,
+				14CAA4EE1AA52FCC00249DB2 /* ViewController.m in Sources */,
 				14BCC8D81A9D9C7800C5F2D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,25 +238,6 @@
 			targetProxy = 14BCC8F21A9D9C7800C5F2D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		14BCC8E51A9D9C7800C5F2D3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14BCC8E61A9D9C7800C5F2D3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		14BCC8EA1A9D9C7800C5F2D3 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14BCC8EB1A9D9C7800C5F2D3 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		14BCC8F91A9D9C7800C5F2D3 /* Debug */ = {
@@ -353,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Dream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Dream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,6 +391,7 @@
 				14BCC8FD1A9D9C7800C5F2D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14BCC8FE1A9D9C7800C5F2D3 /* Build configuration list for PBXNativeTarget "DreamTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +400,7 @@
 				14BCC9001A9D9C7800C5F2D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
