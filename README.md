@@ -1,4 +1,4 @@
-![Dream](https://github.com/NSElvis/Dream/blob/master/Images/dream-cover-v1.png)
+![Dream](https://github.com/NSElvis/Dream/blob/master/Images/cover-v1.png)
 
 [![Work in progress](https://img.shields.io/badge/status-work%20in%20progress-blue.svg)](https://github.com/NSElvis/Dream)
 
@@ -15,6 +15,8 @@ You and your backend engineer agree on an structure, then you open the data mode
 ![model](https://github.com/NSElvis/Dream/blob/master/Images/model-v5.png)
 
 ## 2. The App
+
+<img src="https://github.com/NSElvis/Dream/blob/master/Images/app-v1.png" style="margin-left:auto; margin-right:auto; width:100%;"/>
 
 ## 3. Retreiving Posts
 
