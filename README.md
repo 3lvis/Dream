@@ -10,7 +10,7 @@ You and your backend engineer agree on an structure, then you open the data mode
 
 ## 1. The Model
 
-![model](https://github.com/NSElvis/Dream/blob/master/Images/model-v3.png)
+![model](https://github.com/NSElvis/Dream/blob/master/Images/model-v4.png)
 
 ## 2. The App
 
