@@ -20,10 +20,40 @@ You and your backend engineer agree on an structure, then you open the data mode
 
 ## 3. Retreiving Posts
 
+```objc
+[Post sync:^(NSError *error) {
+    if (error) {
+        // handle error
+    }
+}];
+```
+
 ## 4. Creating a Post
 
-## 5. Discarding a (draft) Post
+```objc
+[post create:^(Post *createdPost, NSError *error) {
+    if (error) {
+        // handle error
+    }
+}];
+```
 
 ## 6. Updating a Post
 
+```objc
+[post update:^(Post *updatedPost, NSError *error) {
+    if (error) {
+        // handle error
+    }
+}];
+```
+
 ## 7. Deleting a Post
+
+```objc
+[post delete:^(NSError *error) {
+    if (error) {
+        // handle error
+    }
+}];
+```
