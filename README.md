@@ -16,7 +16,7 @@ You and your backend engineer agree on an structure, then you open the data mode
 
 ## 2. The App
 
-![app](https://github.com/NSElvis/Dream/blob/master/Images/app-v2.png)
+![app](https://github.com/NSElvis/Dream/blob/master/Images/app-v3.png)
 
 ## 3. Retreiving Posts
 
