@@ -38,7 +38,7 @@ You and your backend engineer agree on an structure, then you open the data mode
 }];
 ```
 
-## 6. Updating a Post
+## 5. Updating a Post
 
 ```objc
 [post update:^(Post *updatedPost, NSError *error) {
@@ -48,7 +48,7 @@ You and your backend engineer agree on an structure, then you open the data mode
 }];
 ```
 
-## 7. Deleting a Post
+## 6. Deleting a Post
 
 ```objc
 [post delete:^(NSError *error) {
