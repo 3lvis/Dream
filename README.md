@@ -18,7 +18,7 @@ You and your backend engineer agree on an structure, then you open the data mode
 
 ![app](https://github.com/NSElvis/Dream/blob/master/Images/app-v3.png)
 
-## 3. Retreiving Posts
+## 3. Syncing Posts
 
 ```objc
 [Post sync:^(NSError *error) {
