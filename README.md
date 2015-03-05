@@ -2,13 +2,15 @@
 
 [![Work in progress](https://img.shields.io/badge/status-work%20in%20progress-blue.svg)](https://github.com/NSElvis/Dream)
 
-UI and UX has always been the main differentiator between apps, persistency and networking in the other side just boilerplate, apps are meant to be the fancy glass on front of the great structure that your backend engineers will build. 
+UI and UX has always been the main differentiator between apps, persistency and networking in the other side is just boilerplate, apps are meant to be the fancy glass on front of the great structure that your backend engineers build.
 
 When making apps I don’t want to think on those things, persistency and networking should be already a solved problem.
 
 This is how I think it should work.
 
-You and your backend engineer agree on an structure, then you open the data modeler, create your tables, wire up their relationships, press a “Generate” button and BOOM! You are ready to go.
+You and your backend engineer agree on an structure, then you open the data modeler, create your tables, wire up their relationships, press a “Generate” button and BOOM! You are ready to start making the best app ever.
+
+That is my Dream.
 
 ## 1. The Model
 
