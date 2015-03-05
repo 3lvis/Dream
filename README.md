@@ -8,7 +8,7 @@ When making apps I don’t want to think on those things, persistency and networ
 
 This is how I think it should work: you and your backend engineer agree on an structure, then you open the data modeler, create your tables, wire up their relationships, press a “Generate” button and *boom*! You are ready to start making the best app ever.
 
-That is my Dream.
+**That** is my Dream.
 
 ## Model
 
