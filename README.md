@@ -12,15 +12,17 @@ You and your backend engineer agree on an structure, then you open the data mode
 
 That is my Dream.
 
-## 1. The Model
+## Model
 
 ![model](https://github.com/NSElvis/Dream/blob/master/Images/model-v7.png)
 
-## 2. The App
+## App
 
 ![app](https://github.com/NSElvis/Dream/blob/master/Images/app-v3.png)
 
-## 3. Syncing Posts
+## API
+
+### Syncing Posts
 
 ```objc
 [Post sync:^(NSError *error) {
@@ -30,7 +32,7 @@ That is my Dream.
 }];
 ```
 
-## 4. Creating a Post
+### Creating a Post
 
 ```objc
 [post create:^(Post *createdPost, NSError *error) {
@@ -40,7 +42,7 @@ That is my Dream.
 }];
 ```
 
-## 5. Updating a Post
+### Updating a Post
 
 ```objc
 [post update:^(Post *updatedPost, NSError *error) {
@@ -50,7 +52,7 @@ That is my Dream.
 }];
 ```
 
-## 6. Deleting a Post
+### Deleting a Post
 
 ```objc
 [post delete:^(NSError *error) {
