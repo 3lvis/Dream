@@ -22,7 +22,7 @@ That is my Dream.
 
 ## API
 
-### Listing Posts in a UITableView
+### Listing all the posts
 
 Listing all the posts created in the last month should be this easy.
 
