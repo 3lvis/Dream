@@ -22,6 +22,17 @@ That is my Dream.
 
 ## API
 
+### Hooking up a UITableView
+
+Listing all the post created in the last month should be this easy.
+
+```objc
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"createdDate > %@", [NSDate lastMonthDate]];
+NSSortDescriptor *sortedDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdDate" ascending:YES];
+DREAMDataSource *dataSource = [Post dataSourceForPredicate:predicate sortedByDescriptors:@[sortedDescriptor]];
+tableView.dataSource = self.dataSource;
+```
+
 ### Syncing Posts
 
 ```objc
