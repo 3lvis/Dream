@@ -22,9 +22,9 @@ That is my Dream.
 
 ## API
 
-### Hooking up a UITableView
+### Listing Posts in a UITableView
 
-Listing all the post created in the last month should be this easy.
+Listing all the posts created in the last month should be this easy.
 
 ```objc
 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"createdDate > %@", [NSDate lastMonthDate]];
@@ -72,3 +72,42 @@ tableView.dataSource = self.dataSource;
     }
 }];
 ```
+### Listing all the comments for a Post
+
+```objc
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"post == %@", post];
+NSSortDescriptor *sortedDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdDate" ascending:YES];
+DREAMDataSource *dataSource = [Comment dataSourceForPredicate:predicate sortedByDescriptors:@[sortedDescriptor]];
+tableView.dataSource = self.dataSource;
+```
+
+### Syncing Comments
+
+```objc
+[Comment sync:^(NSError *error) {
+    if (error) {
+        // handle error
+    }
+}];
+```
+
+### Creating a Comment
+
+```objc
+[comment create:^(Comment *createdComment, NSError *error) {
+    if (error) {
+        // handle error
+    }
+}];
+```
+
+### Deleting a Comment
+
+```objc
+[comment delete:^(NSError *error) {
+    if (error) {
+        // handle error
+    }
+}];
+```
+
