@@ -6,9 +6,7 @@ UI and UX has always been the main differentiator between apps, persistency and 
 
 When making apps I don’t want to think on those things, persistency and networking should be already a solved problem.
 
-This is how I think it should work.
-
-You and your backend engineer agree on an structure, then you open the data modeler, create your tables, wire up their relationships, press a “Generate” button and BOOM! You are ready to start making the best app ever.
+This is how I think it should work: you and your backend engineer agree on an structure, then you open the data modeler, create your tables, wire up their relationships, press a “Generate” button and *boom*! You are ready to start making the best app ever.
 
 That is my Dream.
 
