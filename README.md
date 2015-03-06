@@ -158,4 +158,5 @@ NSArray *posts = [Post postsForPredicate:predicate];
 ```
 
 ### Migrations
-?
+
+The truth lives in the cloud, hence a breaking change will do just that, break everything and start over while migrating as much as it can.
