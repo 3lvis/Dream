@@ -115,6 +115,8 @@ This are some of the things you expect when using Dream
 
 ### Offline support
 
+All the items have a `localID`, when they are _synced_ they will also have a `remoteID`.
+
 ```objc
 // If you create a post in offline mode, the post will
 // be saved locally and published when the internet
