@@ -109,3 +109,53 @@ tableView.dataSource = self.dataSource;
 }];
 ```
 
+## Expectations
+
+This are some of the things you expect when using Dream
+
+### Offline support
+
+```objc
+// If you create a post in offline mode, the post will
+// be saved locally and published when the internet
+// connection is available
+
+[post create:^(Post *createdPost, NSError *error) {
+    if (error) {
+        // handle error
+    }
+    
+    // Retrieving a post should work
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"createdPost == %@", createdPost];
+    NSInteger resultCount = [Post resultCountForPredicate:predicate];
+    XCTAssertEqual(resultCount, 1);
+}];
+```
+
+### Only persisting an object by using `create`
+
+```objc
+Post *insertedPost = [Post new];
+insertedPost.remoteID = @1;
+insertedPost.title = "Hello World!";
+
+// This post hasn't been saved, so it shouldn't be persisted
+    
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"insertedPost == %@", insertedPost];
+NSInteger resultCount = [Post resultCountForPredicate:predicate];
+XCTAssertEqual(resultCount, 0);
+```
+
+### Retreiving posts
+
+```objc
+NSArray *posts = [Post posts];
+```
+
+### Retreiving posts using a predicate
+
+```objc
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"createdPost == %@", createdPost];
+NSArray *posts = [Post postsForPredicate:predicate];
+```
