@@ -13,11 +13,7 @@ class RootController: UITableViewController {
     }
 
     func sync() {
-        let changes = [
-            ["id" : "2b6f0cc904d137be2e1730235f5664094b831186"]
-        ]
-
-        Post.sync(changes) { error in
+        Post.sync { error in
             // handle error
         }
     }
@@ -41,7 +37,7 @@ class RootController: UITableViewController {
 
     func delete() {
         let predicate = NSPredicate(format: "id = %@", "2b6f0cc904d137be2e1730235f5664094b831186")
-        guard var post = Post.fetch(predicate).first else { fatalError("Post not found") }
+        guard let post = Post.fetch(predicate).first else { fatalError("Post not found") }
         post.delete { error in
             // handle error
         }

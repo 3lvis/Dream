@@ -10,7 +10,7 @@ struct Post {
         return DREAMDataSource()
     }
 
-    static func sync(changes: [Dictionary<String, String>], completion: (error: NSError?) -> ()) {
+    static func sync(completion: (error: NSError?) -> ()) {
         
     }
 
