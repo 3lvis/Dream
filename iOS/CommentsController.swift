@@ -2,39 +2,49 @@ import UIKit
 
 class CommentsController: UITableViewController {
     func list() {
-        let predicate = NSPredicate(format: "createdDate > %@", NSDate())
+        let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+        let searchPredicate = NSPredicate(format: "id = \(searchID)")
+        guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+
+        let predicate = NSPredicate(format: "post = \(post)")
         let sortDescriptor = NSSortDescriptor(key: "createdDate", ascending: true)
-        let dataSource = Post.dataSource(predicate, sortDescriptors: [sortDescriptor])
+        let dataSource = Comment.dataSource(predicate, sortDescriptors: [sortDescriptor])
         tableView.dataSource = dataSource
     }
 
     func sync() {
-        Comment.sync { error in
+        let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+        let searchPredicate = NSPredicate(format: "id = \(searchID)")
+        guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+
+        Comment.sync(post) { error in
             // handle error
         }
     }
 
     func create() {
-        var post = Post()
-        post.imageURL = NSURL(string: "/path/to/image.png")
-        post.create { createdPost, error in
+        var comment = Comment()
+        comment.text = "This is nice"
+        comment.create { createdComment, error in
             // handle error
         }
     }
 
     func update() {
-        let predicate = NSPredicate(format: "id = %@", "2b6f0cc904d137be2e1730235f5664094b831186")
-        guard var post = Post.fetch(predicate).first else { fatalError("Post not found") }
-        post.imageURL = NSURL(string: "/path/to/image.png")
-        post.update { updatedPost, error in
+        let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+        let predicate = NSPredicate(format: "id = \(searchID)")
+        guard var comment = Comment.fetch(predicate).first else { fatalError("Comment not found") }
+        comment.text = "This is really nice"
+        comment.update { updatedComment, error in
             // handle error
         }
     }
 
     func delete() {
-        let predicate = NSPredicate(format: "id = %@", "2b6f0cc904d137be2e1730235f5664094b831186")
-        guard let post = Post.fetch(predicate).first else { fatalError("Post not found") }
-        post.delete { error in
+        let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+        let predicate = NSPredicate(format: "id = \(searchID)")
+        guard let comment = Comment.fetch(predicate).first else { fatalError("Comment not found") }
+        comment.delete { error in
             // handle error
         }
     }

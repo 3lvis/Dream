@@ -9,7 +9,7 @@ struct Comment {
         return DREAMDataSource()
     }
 
-    static func sync(completion: (error: NSError?) -> ()) {
+    static func sync(post: Post, completion: (error: NSError?) -> ()) {
 
     }
 
