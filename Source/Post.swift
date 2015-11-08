@@ -15,7 +15,7 @@ struct Post {
         
     }
 
-    static func fetch(predicate: NSPredicate) -> [Post] {
+    static func fetch(predicate: NSPredicate? = nil) -> [Post] {
         return [Post()]
     }
 

@@ -23,8 +23,13 @@ class CommentsController: UITableViewController {
     }
 
     func create() {
+        let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+        let searchPredicate = NSPredicate(format: "id = \(searchID)")
+        guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+
         var comment = Comment()
         comment.text = "This is nice"
+        comment.post = post
         comment.create { createdComment, error in
             // handle error
         }

@@ -4,6 +4,7 @@ struct Comment {
     var id: String?
     var createdAt: NSDate = NSDate()
     var text: String?
+    var post: Post?
 
     static func dataSource(predicate: NSPredicate, sortDescriptors: [NSSortDescriptor]) -> DREAMDataSource {
         return DREAMDataSource()
