@@ -71,6 +71,7 @@ post.delete { error in
     // handle error
 }
 ```
+
 ### Listing all the comments for a Post
 
 ```swift
@@ -170,14 +171,14 @@ let posts = Post.fetch(predicate)
 XCTAssertEqual(posts.count, 0)
 ```
 
-### Retreiving posts
+### Retrieving posts
 
 ```swift
 let posts = Post.fetch()
 print(posts)
 ```
 
-### Retreiving posts using a predicate
+### Retrieving posts using a predicate
 
 ```swift
 let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
