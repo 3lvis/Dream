@@ -33,7 +33,7 @@ tableView.dataSource = dataSource
 
 ### Syncing Posts
 
-```objc
+```swift
 Post.sync { error in
     // handle error
 }
@@ -41,7 +41,7 @@ Post.sync { error in
 
 ### Creating a Post
 
-```objc
+```swift
 var post = Post()
 post.imageURL = NSURL(string: "/path/to/image.png")
 post.create { createdPost, error in
@@ -51,8 +51,9 @@ post.create { createdPost, error in
 
 ### Updating a Post
 
-```objc
-let predicate = NSPredicate(format: "id = %@", "2b6f0cc904d137be2e1730235f5664094b831186")
+```swift
+let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+let predicate = NSPredicate(format: "id = \(searchID)")
 guard var post = Post.fetch(predicate).first else { fatalError("Post not found") }
 post.imageURL = NSURL(string: "/path/to/image.png")
 post.update { updatedPost, error in
@@ -62,7 +63,7 @@ post.update { updatedPost, error in
 
 ### Deleting a Post
 
-```objc
+```swift
 let predicate = NSPredicate(format: "id = %@", "2b6f0cc904d137be2e1730235f5664094b831186")
 guard let post = Post.fetch(predicate).first else { fatalError("Post not found") }
 post.delete { error in
