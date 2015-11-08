@@ -179,7 +179,7 @@ print(posts)
 
 ### Retreiving posts using a predicate
 
-```objc
+```swift
 let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
 let predicate = NSPredicate(format: "id = \(searchID)")
 let posts = Post.fetch(predicate)
