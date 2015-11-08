@@ -1,4 +1,4 @@
-![Dream](https://github.com/3lvis/Dream/blob/master/Images/cover-v1.png)
+![Dream](https://github.com/3lvis/Dream/blob/master/Images/cover-v2.png)
 
 [![Work in progress](https://img.shields.io/badge/status-work%20in%20progress-blue.svg)](https://github.com/3lvis/Dream)
 
@@ -12,11 +12,11 @@ This is how I think it should work: you and your backend engineer agree on an st
 
 ## Model
 
-![model](https://github.com/3lvis/Dream/blob/master/Images/model-v7.png)
+![model](https://github.com/3lvis/Dream/blob/master/Images/model-v8.png)
 
 ## App
 
-![app](https://github.com/3lvis/Dream/blob/master/Images/app-v3.png)
+![app](https://github.com/3lvis/Dream/blob/master/Images/app-v4.png)
 
 ## API
 
