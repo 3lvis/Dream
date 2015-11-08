@@ -1,6 +1,6 @@
-![Dream](https://github.com/NSElvis/Dream/blob/master/Images/cover-v1.png)
+![Dream](https://github.com/3lvis/Dream/blob/master/Images/cover-v1.png)
 
-[![Work in progress](https://img.shields.io/badge/status-work%20in%20progress-blue.svg)](https://github.com/NSElvis/Dream)
+[![Work in progress](https://img.shields.io/badge/status-work%20in%20progress-blue.svg)](https://github.com/3lvis/Dream)
 
 UI and UX has always been the main differentiator between apps, persistency and networking on the other side are just boilerplate, apps are meant to be the fancy glass on front of the great structure that your backend engineers build.
 
@@ -12,11 +12,11 @@ This is how I think it should work: you and your backend engineer agree on an st
 
 ## Model
 
-![model](https://github.com/NSElvis/Dream/blob/master/Images/model-v7.png)
+![model](https://github.com/3lvis/Dream/blob/master/Images/model-v7.png)
 
 ## App
 
-![app](https://github.com/NSElvis/Dream/blob/master/Images/app-v3.png)
+![app](https://github.com/3lvis/Dream/blob/master/Images/app-v3.png)
 
 ## API
 
@@ -129,7 +129,7 @@ All the items have a `localID`, when they are _synced_ they will also have a `re
     if (error) {
         // handle error
     }
-    
+
     // Retrieving a post should work
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"createdPost == %@", createdPost];
     NSInteger resultCount = [Post resultCountForPredicate:predicate];
