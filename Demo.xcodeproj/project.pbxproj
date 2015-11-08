@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		14A139B41AEFC72B00AD732F /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A139B31AEFC72B00AD732F /* Tests.swift */; };
+		14C849161BEF9BB200F23394 /* CommentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C849151BEF9BB200F23394 /* CommentsController.swift */; };
 		14EC5F181BEF563F0072D635 /* DREAMDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F171BEF563F0072D635 /* DREAMDataSource.swift */; };
 		14EC5F1A1BEF56550072D635 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F191BEF56550072D635 /* Post.swift */; };
 		14EC5F1C1BEF56590072D635 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F1B1BEF56590072D635 /* Comment.swift */; };
 		14EC5F241BEF57D70072D635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F231BEF57D70072D635 /* AppDelegate.swift */; };
 		14EC5F261BEF57D70072D635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EC5F251BEF57D70072D635 /* Assets.xcassets */; };
 		14EC5F291BEF57D70072D635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EC5F271BEF57D70072D635 /* LaunchScreen.storyboard */; };
-		14EC5F2F1BEF58140072D635 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F2E1BEF58140072D635 /* RootController.swift */; };
+		14EC5F2F1BEF58140072D635 /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F2E1BEF58140072D635 /* PostsController.swift */; };
 		14EC5F301BEF583A0072D635 /* DREAMDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F171BEF563F0072D635 /* DREAMDataSource.swift */; };
 		14EC5F311BEF583E0072D635 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F191BEF56550072D635 /* Post.swift */; };
 		14EC5F321BEF58400072D635 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC5F1B1BEF56590072D635 /* Comment.swift */; };
@@ -29,6 +30,7 @@
 		14C0AF811BD6D4230009ECBE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		14C0AF821BD6D4230009ECBE /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		14C0AF831BD6D4230009ECBE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		14C849151BEF9BB200F23394 /* CommentsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsController.swift; sourceTree = "<group>"; };
 		14EC5F171BEF563F0072D635 /* DREAMDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DREAMDataSource.swift; sourceTree = "<group>"; };
 		14EC5F191BEF56550072D635 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		14EC5F1B1BEF56590072D635 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -37,7 +39,7 @@
 		14EC5F251BEF57D70072D635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14EC5F281BEF57D70072D635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14EC5F2A1BEF57D70072D635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14EC5F2E1BEF58140072D635 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
+		14EC5F2E1BEF58140072D635 /* PostsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				14EC5F231BEF57D70072D635 /* AppDelegate.swift */,
-				14EC5F2E1BEF58140072D635 /* RootController.swift */,
+				14EC5F2E1BEF58140072D635 /* PostsController.swift */,
+				14C849151BEF9BB200F23394 /* CommentsController.swift */,
 				14EC5F251BEF57D70072D635 /* Assets.xcassets */,
 				14EC5F271BEF57D70072D635 /* LaunchScreen.storyboard */,
 				14EC5F2A1BEF57D70072D635 /* Info.plist */,
@@ -244,8 +247,9 @@
 				14EC5F321BEF58400072D635 /* Comment.swift in Sources */,
 				14EC5F301BEF583A0072D635 /* DREAMDataSource.swift in Sources */,
 				14EC5F241BEF57D70072D635 /* AppDelegate.swift in Sources */,
-				14EC5F2F1BEF58140072D635 /* RootController.swift in Sources */,
+				14EC5F2F1BEF58140072D635 /* PostsController.swift in Sources */,
 				14EC5F311BEF583E0072D635 /* Post.swift in Sources */,
+				14C849161BEF9BB200F23394 /* CommentsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +430,7 @@
 				14EC5F2D1BEF57D70072D635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

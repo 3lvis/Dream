@@ -24,53 +24,50 @@ This is how I think it should work: you and your backend engineer agree on an st
 
 Listing all the posts created in the last month should be this easy.
 
-```objc
-NSPredicate *predicate = [NSPredicate predicateWithFormat:@"createdDate > %@", [NSDate lastMonthDate]];
-NSSortDescriptor *sortedDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdDate"
-                                                                   ascending:YES];
-DREAMDataSource *dataSource = [Post dataSourceForPredicate:predicate
-                                       sortedByDescriptors:@[sortedDescriptor]];
-tableView.dataSource = self.dataSource;
+```swift
+let predicate = NSPredicate(format: "createdDate > %@", NSDate())
+let sortDescriptor = NSSortDescriptor(key: "createdDate", ascending: true)
+let dataSource = Post.dataSource(predicate, sortDescriptors: [sortDescriptor])
+tableView.dataSource = dataSource
 ```
 
 ### Syncing Posts
 
 ```objc
-[Post sync:^(NSError *error) {
-    if (error) {
-        // handle error
-    }
-}];
+Post.sync { error in
+    // handle error
+}
 ```
 
 ### Creating a Post
 
 ```objc
-[post create:^(Post *createdPost, NSError *error) {
-    if (error) {
-        // handle error
-    }
-}];
+var post = Post()
+post.imageURL = NSURL(string: "/path/to/image.png")
+post.create { createdPost, error in
+    // handle error
+}
 ```
 
 ### Updating a Post
 
 ```objc
-[post update:^(Post *updatedPost, NSError *error) {
-    if (error) {
-        // handle error
-    }
-}];
+let predicate = NSPredicate(format: "id = %@", "2b6f0cc904d137be2e1730235f5664094b831186")
+guard var post = Post.fetch(predicate).first else { fatalError("Post not found") }
+post.imageURL = NSURL(string: "/path/to/image.png")
+post.update { updatedPost, error in
+    // handle error
+}
 ```
 
 ### Deleting a Post
 
 ```objc
-[post delete:^(NSError *error) {
-    if (error) {
-        // handle error
-    }
-}];
+let predicate = NSPredicate(format: "id = %@", "2b6f0cc904d137be2e1730235f5664094b831186")
+guard let post = Post.fetch(predicate).first else { fatalError("Post not found") }
+post.delete { error in
+    // handle error
+}
 ```
 ### Listing all the comments for a Post
 

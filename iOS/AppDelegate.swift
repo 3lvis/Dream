@@ -11,7 +11,7 @@ extension AppDelegate: UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         guard let window = self.window else { fatalError("Window not found") }
 
-        window.rootViewController = RootController()
+        window.rootViewController = PostsController()
         window.makeKeyAndVisible()
         
         return true

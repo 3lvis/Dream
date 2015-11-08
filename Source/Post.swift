@@ -5,6 +5,7 @@ struct Post {
     var createdAt: NSDate = NSDate()
     var likesCount: Int = 0
     var imageURL: NSURL?
+    var comments = [Comment]()
 
     static func dataSource(predicate: NSPredicate, sortDescriptors: [NSSortDescriptor]) -> DREAMDataSource {
         return DREAMDataSource()

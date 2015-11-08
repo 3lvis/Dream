@@ -1,10 +1,6 @@
 import UIKit
 
-class RootController: UITableViewController {
-    override func viewDidLoad() {
-
-    }
-
+class CommentsController: UITableViewController {
     func list() {
         let predicate = NSPredicate(format: "createdDate > %@", NSDate())
         let sortDescriptor = NSSortDescriptor(key: "createdDate", ascending: true)
@@ -13,7 +9,7 @@ class RootController: UITableViewController {
     }
 
     func sync() {
-        Post.sync { error in
+        Comment.sync { error in
             // handle error
         }
     }
