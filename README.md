@@ -31,7 +31,7 @@ let dataSource = Post.dataSource(predicate, sortDescriptors: [sortDescriptor])
 tableView.dataSource = dataSource
 ```
 
-### Syncing Posts
+### Syncing posts
 
 ```swift
 Post.sync { error in
@@ -39,7 +39,7 @@ Post.sync { error in
 }
 ```
 
-### Creating a Post
+### Creating a post
 
 ```swift
 var post = Post()
@@ -49,7 +49,7 @@ post.create { createdPost, error in
 }
 ```
 
-### Updating a Post
+### Updating a post
 
 ```swift
 let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
@@ -61,10 +61,11 @@ post.update { updatedPost, error in
 }
 ```
 
-### Deleting a Post
+### Deleting a post
 
 ```swift
-let predicate = NSPredicate(format: "id = %@", "2b6f0cc904d137be2e1730235f5664094b831186")
+let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+let predicate = NSPredicate(format: "id = \(searchID)")
 guard let post = Post.fetch(predicate).first else { fatalError("Post not found") }
 post.delete { error in
     // handle error
@@ -72,43 +73,65 @@ post.delete { error in
 ```
 ### Listing all the comments for a Post
 
-```objc
-NSPredicate *predicate = [NSPredicate predicateWithFormat:@"post == %@", post];
-NSSortDescriptor *sortedDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdDate"
-                                                                   ascending:YES];
-DREAMDataSource *dataSource = [Comment dataSourceForPredicate:predicate
-                                          sortedByDescriptors:@[sortedDescriptor]];
-tableView.dataSource = self.dataSource;
+```swift
+let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+let searchPredicate = NSPredicate(format: "id = \(searchID)")
+guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+
+let predicate = NSPredicate(format: "post = \(post)")
+let sortDescriptor = NSSortDescriptor(key: "createdDate", ascending: true)
+let dataSource = Comment.dataSource(predicate, sortDescriptors: [sortDescriptor])
+tableView.dataSource = dataSource
 ```
 
-### Syncing Comments
+### Syncing comments
 
-```objc
-[Comment sync:^(NSError *error) {
-    if (error) {
-        // handle error
-    }
-}];
+```swift
+let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+let searchPredicate = NSPredicate(format: "id = \(searchID)")
+guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+
+Comment.sync(post) { error in
+    // handle error
+}
 ```
 
-### Creating a Comment
+### Creating a comment
 
-```objc
-[comment create:^(Comment *createdComment, NSError *error) {
-    if (error) {
-        // handle error
-    }
-}];
+```swift
+let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+let searchPredicate = NSPredicate(format: "id = \(searchID)")
+guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+
+var comment = Comment()
+comment.text = "This is nice"
+comment.post = post
+comment.create { createdComment, error in
+    // handle error
+}
 ```
 
-### Deleting a Comment
+### Updating a comment
 
-```objc
-[comment delete:^(NSError *error) {
-    if (error) {
-        // handle error
-    }
-}];
+```swift
+let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+let predicate = NSPredicate(format: "id = \(searchID)")
+guard var comment = Comment.fetch(predicate).first else { fatalError("Comment not found") }
+comment.text = "This is really nice"
+comment.update { updatedComment, error in
+    // handle error
+}
+```
+
+### Deleting a comment
+
+```swift
+let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+let predicate = NSPredicate(format: "id = \(searchID)")
+guard let comment = Comment.fetch(predicate).first else { fatalError("Comment not found") }
+comment.delete { error in
+    // handle error
+}
 ```
 
 ## Expectations
