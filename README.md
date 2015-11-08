@@ -25,7 +25,7 @@ This is how I think it should work: you and your backend engineer agree on an st
 Listing all the posts created in the last month should be this easy.
 
 ```swift
-let predicate = NSPredicate(format: "createdDate > %@", NSDate())
+let predicate = NSPredicate(format: "createdDate > \(NSDate())")
 let sortDescriptor = NSSortDescriptor(key: "createdDate", ascending: true)
 let dataSource = Post.dataSource(predicate, sortDescriptors: [sortDescriptor])
 tableView.dataSource = dataSource
