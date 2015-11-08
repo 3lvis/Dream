@@ -142,46 +142,48 @@ This are some of the things you expect when using Dream
 
 All the items have a `localID`, when they are _synced_ they will also have a `remoteID`.
 
-```objc
+```swift
 // If you create a post in offline mode, the post will
 // be saved locally and published when the internet
 // connection is available
-[post create:^(Post *createdPost, NSError *error) {
-    if (error) {
+var post = Post()
+post.imageURL = NSURL(string: "/path/to/image.png")
+post.create { createdPost, error in
+    if let error = error {
         // handle error
     }
 
-    // Retrieving a post should work
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"createdPost == %@", createdPost];
-    NSInteger resultCount = [Post resultCountForPredicate:predicate];
-    XCTAssertEqual(resultCount, 1);
-}];
+    let predicate = NSPredicate(format: "id = \(post.id)")
+    let posts = Post.fetch(predicate)
+    XCTAssertEqual(posts.count, 1)
+}
 ```
 
 ### Only persisting an object by using `create`
 
-```objc
-Post *insertedPost = [Post new];
-insertedPost.remoteID = @1;
-insertedPost.title = "Hello World!";
+```swift
+var post = Post()
+post.imageURL = NSURL(string: "/path/to/image.png")
 
-// This post hasn't been saved, so it shouldn't be persisted
-NSPredicate *predicate = [NSPredicate predicateWithFormat:@"insertedPost == %@", insertedPost];
-NSInteger resultCount = [Post resultCountForPredicate:predicate];
-XCTAssertEqual(resultCount, 0);
+let predicate = NSPredicate(format: "id = \(post.id)")
+let posts = Post.fetch(predicate)
+XCTAssertEqual(posts.count, 0)
 ```
 
 ### Retreiving posts
 
-```objc
-NSArray *posts = [Post posts];
+```swift
+let posts = Post.fetch()
+print(posts)
 ```
 
 ### Retreiving posts using a predicate
 
 ```objc
-NSPredicate *predicate = [NSPredicate predicateWithFormat:@"createdPost == %@", createdPost];
-NSArray *posts = [Post postsForPredicate:predicate];
+let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
+let predicate = NSPredicate(format: "id = \(searchID)")
+let posts = Post.fetch(predicate)
+print(posts)
 ```
 
 ### Migrations
