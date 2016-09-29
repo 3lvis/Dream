@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Dream"
-  s.summary          = "A short description of Dream."
+  s.summary          = "The future of networking and persistency on iOS, OS X, watchOS and tvOS"
   s.version          = "0.1.0"
   s.homepage         = "https://github.com/3lvis/Dream"
   s.license          = 'MIT'
