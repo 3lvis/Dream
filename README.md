@@ -52,9 +52,7 @@ post.create { createdPost, error in
 ### Updating a post
 
 ```swift
-let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
-let predicate = NSPredicate(format: "id = \(searchID)")
-guard var post = Post.fetch(predicate).first else { fatalError("Post not found") }
+let post = Post.fetch(id: "2b6f0cc904d137be2e1730235f5664094b831186")
 post.imageURL = URL(string: "/path/to/image.png")
 post.update { updatedPost, error in
     // handle error
@@ -64,9 +62,7 @@ post.update { updatedPost, error in
 ### Deleting a post
 
 ```swift
-let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
-let predicate = NSPredicate(format: "id = \(searchID)")
-guard let post = Post.fetch(predicate).first else { fatalError("Post not found") }
+let post = Post.fetch(id: "2b6f0cc904d137be2e1730235f5664094b831186")
 post.delete { error in
     // handle error
 }
@@ -75,9 +71,7 @@ post.delete { error in
 ### Listing all the comments for a Post
 
 ```swift
-let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
-let searchPredicate = NSPredicate(format: "id = \(searchID)")
-guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+let post = Post.fetch(id: "2b6f0cc904d137be2e1730235f5664094b831186")
 
 let predicate = NSPredicate(format: "post = \(post)")
 let sortDescriptor = NSSortDescriptor(key: "createdDate", ascending: true)
@@ -88,9 +82,7 @@ tableView.dataSource = dataSource
 ### Syncing comments
 
 ```swift
-let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
-let searchPredicate = NSPredicate(format: "id = \(searchID)")
-guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+let post = Post.fetch(id: "2b6f0cc904d137be2e1730235f5664094b831186")
 
 Comment.sync(post) { error in
     // handle error
@@ -100,9 +92,7 @@ Comment.sync(post) { error in
 ### Creating a comment
 
 ```swift
-let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
-let searchPredicate = NSPredicate(format: "id = \(searchID)")
-guard let post = Post.fetch(searchPredicate).first else { fatalError("Post not found") }
+let post = Post.fetch(id: "2b6f0cc904d137be2e1730235f5664094b831186")
 
 var comment = Comment()
 comment.text = "This is nice"
@@ -115,9 +105,7 @@ comment.create { createdComment, error in
 ### Updating a comment
 
 ```swift
-let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
-let predicate = NSPredicate(format: "id = \(searchID)")
-guard var comment = Comment.fetch(predicate).first else { fatalError("Comment not found") }
+let comment = Comment.fetch(id: "2b6f0cc904d137be2e1730235f5664094b831186")
 comment.text = "This is really nice"
 comment.update { updatedComment, error in
     // handle error
@@ -127,9 +115,7 @@ comment.update { updatedComment, error in
 ### Deleting a comment
 
 ```swift
-let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
-let predicate = NSPredicate(format: "id = \(searchID)")
-guard let comment = Comment.fetch(predicate).first else { fatalError("Comment not found") }
+let comment = Comment.fetch(id: "2b6f0cc904d137be2e1730235f5664094b831186")
 comment.delete { error in
     // handle error
 }
