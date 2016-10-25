@@ -43,7 +43,7 @@ Post.sync { error in
 
 ```swift
 var post = Post()
-post.imageURL = NSURL(string: "/path/to/image.png")
+post.imageURL = URL(string: "/path/to/image.png")
 post.create { createdPost, error in
     // handle error
 }
@@ -55,7 +55,7 @@ post.create { createdPost, error in
 let searchID = "2b6f0cc904d137be2e1730235f5664094b831186"
 let predicate = NSPredicate(format: "id = \(searchID)")
 guard var post = Post.fetch(predicate).first else { fatalError("Post not found") }
-post.imageURL = NSURL(string: "/path/to/image.png")
+post.imageURL = URL(string: "/path/to/image.png")
 post.update { updatedPost, error in
     // handle error
 }
@@ -148,7 +148,7 @@ All the items have a `localID`, when they are _synced_ they will also have a `re
 // be saved locally and published when the internet
 // connection is available
 var post = Post()
-post.imageURL = NSURL(string: "/path/to/image.png")
+post.imageURL = URL(string: "/path/to/image.png")
 post.create { createdPost, error in
     if let error = error {
         // handle error
@@ -164,7 +164,7 @@ post.create { createdPost, error in
 
 ```swift
 var post = Post()
-post.imageURL = NSURL(string: "/path/to/image.png")
+post.imageURL = URL(string: "/path/to/image.png")
 
 let predicate = NSPredicate(format: "id = \(post.id)")
 let posts = Post.fetch(predicate)
