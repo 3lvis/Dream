@@ -2,32 +2,32 @@ import Foundation
 
 struct Post {
     var id: String?
-    var createdAt: NSDate = NSDate()
+    var createdAt: Date = Date()
     var likesCount: Int = 0
-    var imageURL: NSURL?
+    var imageURL: URL?
     var comments = [Comment]()
 
-    static func dataSource(predicate: NSPredicate, sortDescriptors: [NSSortDescriptor]) -> DREAMDataSource {
+    static func dataSource(_ predicate: NSPredicate, sortDescriptors: [NSSortDescriptor]) -> DREAMDataSource {
         return DREAMDataSource()
     }
 
-    static func sync(completion: (error: NSError?) -> ()) {
+    static func sync(_ completion: (_ error: NSError?) -> ()) {
         
     }
 
-    static func fetch(predicate: NSPredicate? = nil) -> [Post] {
+    static func fetch(_ predicate: NSPredicate? = nil) -> [Post] {
         return [Post()]
     }
 
-    func create(completion: (createdPost: Post, error: NSError?) -> ()) {
+    func create(_ completion: (_ createdPost: Post, _ error: NSError?) -> ()) {
         
     }
 
-    func update(completion: (updatedPost: Post, error: NSError?) -> ()) {
+    func update(_ completion: (_ updatedPost: Post, _ error: NSError?) -> ()) {
 
     }
 
-    func delete(completion: (error: NSError?) -> ()) {
+    func delete(_ completion: (_ error: NSError?) -> ()) {
         
     }
 }

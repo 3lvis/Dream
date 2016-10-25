@@ -2,31 +2,31 @@ import Foundation
 
 struct Comment {
     var id: String?
-    var createdAt: NSDate = NSDate()
+    var createdAt: Date = Date()
     var text: String?
     var post: Post?
 
-    static func dataSource(predicate: NSPredicate, sortDescriptors: [NSSortDescriptor]) -> DREAMDataSource {
+    static func dataSource(_ predicate: NSPredicate, sortDescriptors: [NSSortDescriptor]) -> DREAMDataSource {
         return DREAMDataSource()
     }
 
-    static func sync(post: Post, completion: (error: NSError?) -> ()) {
+    static func sync(_ post: Post, completion: (_ error: NSError?) -> ()) {
 
     }
 
-    static func fetch(predicate: NSPredicate) -> [Comment] {
+    static func fetch(_ predicate: NSPredicate) -> [Comment] {
         return [Comment()]
     }
 
-    func create(completion: (createdComment: Comment, error: NSError?) -> ()) {
+    func create(_ completion: (_ createdComment: Comment, _ error: NSError?) -> ()) {
 
     }
 
-    func update(completion: (updatedComment: Comment, error: NSError?) -> ()) {
+    func update(_ completion: (_ updatedComment: Comment, _ error: NSError?) -> ()) {
 
     }
 
-    func delete(completion: (error: NSError?) -> ()) {
+    func delete(_ completion: (_ error: NSError?) -> ()) {
         
     }
 }
